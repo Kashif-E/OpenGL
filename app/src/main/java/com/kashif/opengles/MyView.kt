@@ -29,8 +29,21 @@ class MyView
         @RequiresApi(Build.VERSION_CODES.M)
         override fun onDrawForeground(canvas: Canvas?) {
             super.onDrawForeground(canvas)
+
+            //simple shape drawing
             canvas!!.drawRect(40F, 40F, 400F, 400F, redPaint!!)
             canvas.drawOval(40f , 40f , 800f, 800f , redPaint!!)
+            // drawing circles
+            // Centre at (300,300) with radius 250
+            canvas.drawCircle(300f , 300f , 250f , redPaint!!)
+            // Centre at (500,450) with radius 50
+            canvas.drawCircle(500f , 450f , 50f , redPaint!!)
+            //Square - top left (500,500), bottom right (700,700)
+            canvas.drawRect(500f, 500f ,700f ,700f ,redPaint!!)
+            //Circle - Centre at (600,600) with radius X.
+            canvas.drawCircle(600f, 600f , 145f ,redPaint!!)
+
+
         }
 
 
